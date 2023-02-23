@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&family=Sawarabi+Gothic&family=Source+Sans+3:wght@800&display=swap"
+    rel="stylesheet"
+  />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <head>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 750px;
+        grid-template-rows: 350px;
+        gap: 3px 3px;
+        grid-auto-flow: row;
+        grid-template-areas: "signature_sub";
+      }
+
+      .signature_sub {
+        display: grid;
+        grid-template-columns: 750px;
+        grid-template-rows: 290px 20px 40px;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "signature_main"
+          "signature_bottom"
+          "signature_footer";
+        grid-area: signature_sub;
+      }
+
+      .signature_main {
+        display: grid;
+        grid-template-columns: 66.6% 33.3%;
+        grid-template-rows: 100%;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: "signature_main_sub_A signature_main_sub_B";
+        grid-area: signature_main;
+      }
+
+      .signature_main_sub_A {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 14% 7% 79%;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "name"
+          "title"
+          "details";
+        grid-area: signature_main_sub_A;
+      }
+
+      .title {
+        grid-area: title;
+      }
+
+      .name {
+        grid-area: name;
+      }
+
+      .details {
+        display: grid;
+        grid-template-columns: 15% 85%;
+        grid-template-rows: 10px 40px 10px 40px 10px 40px 10px 30px 39px;
+        grid-auto-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "details_logo_white_1 details_white_1"
+          "contact_logo contact_details"
+          "details_logo_white_2 details_white_2"
+          "email_logo email_details"
+          "details_logo_white_3 details_white_3"
+          "location_logo location_details"
+          "details_logo_white_4 details_white_4"
+          "website_logo website_details"
+          "details_logo_white_5 details_white_5";
+        grid-area: details;
+      }
+
+      .contact_logo {
+        grid-area: contact_logo;
+      }
+
+      .contact_logo .image {
+        min-width: 0; /* ensure the image can shrink if needed */
+        min-height: 0; /* ensure the image can shrink if needed */
+        max-width: 100%; /* prevent the image from growing larger than its container */
+        max-height: 100%; /* prevent the image from growing larger than its container */
+      }
+
+      .contact_details {
+        grid-area: contact_details;
+      }
+
+      .email_logo {
+        grid-area: email_logo;
+      }
+
+      .email_logo .image {
+        min-width: 0; /* ensure the image can shrink if needed */
+        min-height: 0; /* ensure the image can shrink if needed */
+        max-width: 100%; /* prevent the image from growing larger than its container */
+        max-height: 100%; /* prevent the image from growing larger than its container */
+      }
+
+      .email_details {
+        grid-area: email_details;
+      }
+
+      .location_logo {
+        grid-area: location_logo;
+      }
+
+      .location_logo .image {
+        min-width: 0; /* ensure the image can shrink if needed */
+        min-height: 0; /* ensure the image can shrink if needed */
+        max-width: 100%; /* prevent the image from growing larger than its container */
+        max-height: 100%; /* prevent the image from growing larger than its container */
+      }
+
+      .location_details {
+        grid-area: location_details;
+      }
+
+      .website_logo {
+        grid-area: website_logo;
+      }
+
+      .website_logo .image {
+        min-width: 0; /* ensure the image can shrink if needed */
+        min-height: 0; /* ensure the image can shrink if needed */
+        max-width: 100%; /* prevent the image from growing larger than its container */
+        max-height: 100%; /* prevent the image from growing larger than its container */
+      }
+
+      .website_details {
+        grid-area: website_details;
+      }
+
+      .website_details .image {
+        min-width: 0; /* ensure the image can shrink if needed */
+        min-height: 0; /* ensure the image can shrink if needed */
+        max-width: 100%; /* prevent the image from growing larger than its container */
+        max-height: 100%; /* prevent the image from growing larger than its container */
+      }
+
+      .details_logo_white_1 {
+        grid-area: details_logo_white_1;
+      }
+
+      .details_white_1 {
+        grid-area: details_white_1;
+      }
+
+      .details_white_2 {
+        grid-area: details_white_2;
+      }
+
+      .details_white_3 {
+        grid-area: details_white_3;
+      }
+
+      .details_white_4 {
+        grid-area: details_white_4;
+      }
+
+      .details_white_5 {
+        grid-area: details_white_5;
+      }
+
+      .details_logo_white_2 {
+        grid-area: details_logo_white_2;
+      }
+
+      .details_logo_white_3 {
+        grid-area: details_logo_white_3;
+      }
+
+      .details_logo_white_4 {
+        grid-area: details_logo_white_4;
+      }
+
+      .details_logo_white_5 {
+        grid-area: details_logo_white_5;
+      }
+
+      .signature_main_sub_B {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 65% 22% 13%;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "logo_sub"
+          "logo_B"
+          "logo_whitespace_B";
+        grid-area: signature_main_sub_B;
+      }
+
+      .logo_B {
+        display: grid;
+        grid-template-columns: 0.7fr 1.3fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: "logo_B_text logo_B_logo";
+        grid-area: logo_B;
+      }
+
+      .logo_B_text {
+        grid-area: logo_B_text;
+      }
+
+      .logo_B_logo {
+        grid-area: logo_B_logo;
+      }
+
+      .logo_B_logo .image {
+        min-width: 0; /* ensure the image can shrink if needed */
+        min-height: 0; /* ensure the image can shrink if needed */
+        max-width: 100%; /* prevent the image from growing larger than its container */
+        max-height: 100%; /* prevent the image from growing larger than its container */
+        object-fit: contain;
+      }
+
+      .logo_whitespace_B {
+        grid-area: logo_whitespace_B;
+      }
+
+      .logo_sub {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 70%;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "logo_whitespace_A"
+          "logo_A";
+        grid-area: logo_sub;
+      }
+
+      .logo_A {
+        grid-area: logo_A;
+      }
+
+      .logo_A .image {
+        min-width: 0; /* ensure the image can shrink if needed */
+        min-height: 0; /* ensure the image can shrink if needed */
+        max-width: 100%; /* prevent the image from growing larger than its container */
+        max-height: 100%; /* prevent the image from growing larger than its container */
+        }
+
+      .logo_whitespace_A {
+        grid-area: logo_whitespace_A;
+      }
+
+      .signature_footer {
+        grid-area: signature_footer;
+      }
+
+      .signature_bottom {
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        grid-template-rows: 100%;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: "green_white_1 green_details green_white_2";
+        grid-area: signature_bottom;
+      }
+
+      .green_details {
+        grid-area: green_details;
+      }
+
+      .green_details .image {
+        min-width: 0; /* ensure the image can shrink if needed */
+        min-height: 0; /* ensure the image can shrink if needed */
+        max-width: 100%; /* prevent the image from growing larger than its container */
+        max-height: 100%; /* prevent the image from growing larger than its container */
+      }
+
+      .green_white_1 {
+        grid-area: green_white_1;
+      }
+
+      .green_white_2 {
+        grid-area: green_white_2;
+      }
+
+      @media all and (-ms-high-contrast: none) {
+        .container {
+          display: -ms-grid;
+          -ms-grid-columns: 750px;
+          -ms-grid-rows: 350px;
+        }
+
+        .signature_sub {
+          display: -ms-grid;
+          -ms-grid-columns: 750px;
+          -ms-grid-rows: 290px 20px 40px;
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .signature_main {
+          display: -ms-grid;
+          -ms-grid-columns: 66.6% 33.3%;
+          -ms-grid-rows: 100%;
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .signature_main_sub_A {
+          display: -ms-grid;
+          -ms-grid-columns: 100%;
+          -ms-grid-rows: 14% 7% 79%;
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .title {
+          -ms-grid-row: 2;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .name {
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .details {
+          display: -ms-grid;
+          -ms-grid-columns: 15% 85%;
+          -ms-grid-rows: 10px 40px 10px 40px 10px 40px 10px 30px 39px;
+          -ms-grid-row: 3;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .contact_logo {
+          -ms-grid-row: 2;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .contact_details {
+          -ms-grid-row: 2;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 2;
+          -ms-grid-column-span: 1;
+        }
+
+        .email_logo {
+          -ms-grid-row: 4;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .email_details {
+          -ms-grid-row: 4;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 2;
+          -ms-grid-column-span: 1;
+        }
+
+        .location_logo {
+          -ms-grid-row: 6;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .location_details {
+          -ms-grid-row: 6;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 2;
+          -ms-grid-column-span: 1;
+        }
+
+        .website_logo {
+          -ms-grid-row: 8;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .website_details {
+          -ms-grid-row: 8;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 2;
+          -ms-grid-column-span: 1;
+        }
+
+        .details_logo_white_1 {
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .details_white_1 {
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 2;
+          -ms-grid-column-span: 1;
+        }
+
+        .details_white_2 {
+          -ms-grid-row: 3;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 2;
+          -ms-grid-column-span: 1;
+        }
+
+        .details_white_3 {
+          -ms-grid-row: 5;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 2;
+          -ms-grid-column-span: 1;
+        }
+
+        .details_white_4 {
+          -ms-grid-row: 7;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 2;
+          -ms-grid-column-span: 1;
+        }
+
+        .details_white_5 {
+          -ms-grid-row: 9;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 2;
+          -ms-grid-column-span: 1;
+        }
+
+        .details_logo_white_2 {
+          -ms-grid-row: 3;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .details_logo_white_3 {
+          -ms-grid-row: 5;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .details_logo_white_4 {
+          -ms-grid-row: 7;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .details_logo_white_5 {
+          -ms-grid-row: 9;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .signature_main_sub_B {
+          display: -ms-grid;
+          -ms-grid-columns: 100%;
+          -ms-grid-rows: 65% 22% 13%;
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 2;
+          -ms-grid-column-span: 1;
+        }
+
+        .logo_B {
+          display: -ms-grid;
+          -ms-grid-columns: 0.7fr 1.3fr;
+          -ms-grid-rows: 1fr;
+          -ms-grid-row: 2;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .logo_B_text {
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .logo_B_logo {
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 2;
+          -ms-grid-column-span: 1;
+        }
+
+        .logo_whitespace_B {
+          -ms-grid-row: 3;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .logo_sub {
+          display: -ms-grid;
+          -ms-grid-columns: 1fr;
+          -ms-grid-rows: 30% 70%;
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .logo_A {
+          -ms-grid-row: 2;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .logo_whitespace_A {
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .signature_footer {
+          -ms-grid-row: 3;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .signature_bottom {
+          display: -ms-grid;
+          -ms-grid-columns: 30% 40% 30%;
+          -ms-grid-rows: 100%;
+          -ms-grid-row: 2;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .green_details {
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 2;
+          -ms-grid-column-span: 1;
+        }
+
+        .green_white_1 {
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 1;
+        }
+
+        .green_white_2 {
+          -ms-grid-row: 1;
+          -ms-grid-row-span: 1;
+          -ms-grid-column: 3;
+          -ms-grid-column-span: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="signature_sub">
+        <div class="signature_main">
+          <div class="signature_main_sub_A">
+            <div class="title">Tour Consultant</div>
+            <div class="name">MONICA <span>REGERU</span></div>
+            <div class="details">
+              <div class="contact_logo">
+                <img class="image" src="img/Contacticon-01.png" />
+              </div>
+              <div class="contact_details">
+                (+254) 20 7606 000-8 | (+254) 758 023 508
+              </div>
+              <div class="email_logo">
+                <img class="image" src="img/Emailicon-01.png" />
+              </div>
+              <div class="email_details">
+                monica@sensegetaways.com | hello@sensegetaways.com
+              </div>
+              <div class="location_logo">
+                <img class="image" src="img/Locatioicon-01.png" />
+              </div>
+              <div class="location_details">
+                Mombasa Road, Next to Plaza 2000.<br />P.O Box 59470 00200
+                Nairobi, Kenya
+              </div>
+              <div class="website_logo">
+                <img class="image" src="img/Websiteicon-01.png" />
+              </div>
+              <div class="website_details">
+                www.sensegetaways.com | Follow us:<span>
+                  <img class="image" src="img/facebookicon-01.png" />
+                  <img class="image" src="img/Instagramicon-01.png"
+                /></span>
+              </div>
+              <div class="details_logo_white_1"></div>
+              <div class="details_white_1"></div>
+              <div class="details_white_2"></div>
+              <div class="details_white_3"></div>
+              <div class="details_white_4"></div>
+              <div class="details_white_5"></div>
+              <div class="details_logo_white_2"></div>
+              <div class="details_logo_white_3"></div>
+              <div class="details_logo_white_4"></div>
+              <div class="details_logo_white_5"></div>
+            </div>
+          </div>
+          <div class="signature_main_sub_B">
+            <div class="logo_B">
+              <div class="logo_B_text">Powered by</div>
+              <div class="logo_B_logo">
+                <img class="image" src="img/SOA_Logo-01.png" />
+              </div>
+            </div>
+            <div class="logo_whitespace_B"></div>
+            <div class="logo_sub">
+              <div class="logo_whitespace_A"></div>
+              <div class="logo_A">
+                <img class="image" src="img/SGE_Logo-02.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="signature_footer"></div>
+        <div class="signature_bottom">
+          <div class="green_details">
+            <img class="image" src="img/Savetheenvironment-01.png" />Rethink.
+            Reduce. Re-use. Recycle
+          </div>
+          <div class="green_white_1"></div>
+          <div class="green_white_2"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
