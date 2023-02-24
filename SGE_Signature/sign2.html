@@ -56,10 +56,27 @@
 
       .title {
         grid-area: title;
+        font-family:'Sawarabi Gothic',sans-serif;
+        font-size:12px;
+        color:rgb(18,18,18);
+        font-weight:bold;
+        line-height:24px;
       }
 
       .name {
         grid-area: name;
+        font-family:'Source Sans 3',sans-serif;
+font-size:30px;
+color:rgb(0,115,208);
+font-weight:bolder;
+line-height:24px;
+      }
+      .name .spanText{
+        font-family:'Alegreya Sans',sans-serif;
+font-size:30px;
+color:rgb(250,175,4);
+font-weight: lighter ;
+line-height:24px;
       }
 
       .details {
@@ -87,6 +104,10 @@
       }
 
       .contact_logo .image {
+        width: 100%;
+  height: 100%;
+  object-fit: cover;
+        
         min-width: 0; /* ensure the image can shrink if needed */
         min-height: 0; /* ensure the image can shrink if needed */
         max-width: 100%; /* prevent the image from growing larger than its container */
@@ -95,6 +116,11 @@
 
       .contact_details {
         grid-area: contact_details;
+        font-family:'Sawarabi Gothic',sans-serif;
+        font-size:14px;
+        color:rgb(18,18,18);
+        font-weight:bold;
+        line-height:24px;
       }
 
       .email_logo {
@@ -102,6 +128,10 @@
       }
 
       .email_logo .image {
+        width: 100%;
+  height: 100%;
+  object-fit: cover;
+        
         min-width: 0; /* ensure the image can shrink if needed */
         min-height: 0; /* ensure the image can shrink if needed */
         max-width: 100%; /* prevent the image from growing larger than its container */
@@ -110,6 +140,11 @@
 
       .email_details {
         grid-area: email_details;
+        font-family:'Sawarabi Gothic',sans-serif;
+        font-size:14px;
+        color:rgb(18,18,18);
+        font-weight:bold;
+        line-height:24px;
       }
 
       .location_logo {
@@ -117,6 +152,10 @@
       }
 
       .location_logo .image {
+        width: 100%;
+  height: 100%;
+  object-fit: cover;
+        
         min-width: 0; /* ensure the image can shrink if needed */
         min-height: 0; /* ensure the image can shrink if needed */
         max-width: 100%; /* prevent the image from growing larger than its container */
@@ -125,6 +164,11 @@
 
       .location_details {
         grid-area: location_details;
+        font-family:'Sawarabi Gothic',sans-serif;
+        font-size:14px;
+        color:rgb(18,18,18);
+        font-weight:bold;
+        line-height:24px;
       }
 
       .website_logo {
@@ -132,6 +176,10 @@
       }
 
       .website_logo .image {
+        width: 100%;
+  height: 100%;
+  object-fit: cover;
+        
         min-width: 0; /* ensure the image can shrink if needed */
         min-height: 0; /* ensure the image can shrink if needed */
         max-width: 100%; /* prevent the image from growing larger than its container */
@@ -139,10 +187,49 @@
       }
 
       .website_details {
-        grid-area: website_details;
+        display: grid; 
+  grid-template-columns: 60% 8% 8% 24%; 
+  grid-template-rows: 100%; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "website_details_text website_details_logo_A website_details_logo_B website_details_whitespace"; 
+  grid-area: website_details; 
       }
 
-      .website_details .image {
+      .website_details_text {
+         grid-area: website_details_text; 
+         font-family:'Sawarabi Gothic',sans-serif;
+        font-size:14px;
+        color:rgb(18,18,18);
+        font-weight:bold;
+        line-height:24px;
+        }
+      .website_details_logo_A { 
+        grid-area: website_details_logo_A;
+       }
+      .website_details_logo_B {
+         grid-area: website_details_logo_B; 
+         
+        }
+      .website_details_whitespace { 
+        grid-area: website_details_whitespace; 
+      }
+
+      .website_details_logo_A .image {
+        width: 100%;
+  height: 100%;
+  object-fit: cover;
+        
+        min-width: 0; /* ensure the image can shrink if needed */
+        min-height: 0; /* ensure the image can shrink if needed */
+        max-width: 100%; /* prevent the image from growing larger than its container */
+        max-height: 100%; /* prevent the image from growing larger than its container */
+      }
+
+      .website_details_logo_B .image {
+        width: 100%;
+        height: 100%;
+        object-fit:cover;        
         min-width: 0; /* ensure the image can shrink if needed */
         min-height: 0; /* ensure the image can shrink if needed */
         max-width: 100%; /* prevent the image from growing larger than its container */
@@ -192,7 +279,7 @@
       .signature_main_sub_B {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 65% 22% 13%;
+        grid-template-rows: 70% 18% 12%;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
@@ -202,30 +289,44 @@
         grid-area: signature_main_sub_B;
       }
 
-      .logo_B {
-        display: grid;
-        grid-template-columns: 0.7fr 1.3fr;
-        grid-template-rows: 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas: "logo_B_text logo_B_logo";
-        grid-area: logo_B;
-      }
+      .logo_B {  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 100%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo_B_text logo_B_logo";
+  grid-area: logo_B;
+}
 
       .logo_B_text {
         grid-area: logo_B_text;
+        text-align:left; 
+        max-width: 191px; 
+        text-decoration:none; 
+        color:#333231; 
+        font-family:Verdana, sans-serif; 
+        line-height: 17px; 
+        font-size:smaller; 
+        font-weight: lighter;
+        font-style: italic;  
       }
 
       .logo_B_logo {
         grid-area: logo_B_logo;
+             
+        justify-content:center;
+        align-items:center;
       }
 
       .logo_B_logo .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;        
         min-width: 0; /* ensure the image can shrink if needed */
         min-height: 0; /* ensure the image can shrink if needed */
         max-width: 100%; /* prevent the image from growing larger than its container */
-        max-height: 100%; /* prevent the image from growing larger than its container */
-        object-fit: contain;
+        max-height: 100%; /* prevent the image from growing larger than its container */       
       }
 
       .logo_whitespace_B {
@@ -234,7 +335,7 @@
 
       .logo_sub {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns:100%;
         grid-template-rows: 30% 70%;
         gap: 0px 0px;
         grid-auto-flow: row;
@@ -249,6 +350,10 @@
       }
 
       .logo_A .image {
+        width: 100%;
+  height: 100%;
+  object-fit: cover;
+        
         min-width: 0; /* ensure the image can shrink if needed */
         min-height: 0; /* ensure the image can shrink if needed */
         max-width: 100%; /* prevent the image from growing larger than its container */
@@ -264,325 +369,45 @@
       }
 
       .signature_bottom {
-        display: grid;
-        grid-template-columns: 30% 40% 30%;
-        grid-template-rows: 100%;
-        grid-auto-columns: 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas: "green_white_1 green_details green_white_2";
-        grid-area: signature_bottom;
+        display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 25% 5% 40% 30%; 
+  grid-template-rows: 100%; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "green_white_1 green_logo green_details green_white_2"; 
+  grid-area: signature_bottom;
       }
 
-      .green_details {
-        grid-area: green_details;
-      }
+      .green_logo { grid-area: green_logo; }
+.green_white_1 { grid-area: green_white_1; }
 
-      .green_details .image {
+.green_details {
+    grid-area: green_details;
+    font-family:'Sawarabi Gothic',sans-serif;
+    font-size:12px;
+    color:rgb(131, 255, 81);
+    font-weight:lighter;
+    line-height:24px;
+    font-style: italic;
+  }
+
+.green_white_2 { grid-area: green_white_2; }
+
+      .green_logo .image {
+        width: 100%;
+  height: 100%;
+  object-fit: cover;
+        
         min-width: 0; /* ensure the image can shrink if needed */
         min-height: 0; /* ensure the image can shrink if needed */
         max-width: 100%; /* prevent the image from growing larger than its container */
         max-height: 100%; /* prevent the image from growing larger than its container */
       }
 
-      .green_white_1 {
-        grid-area: green_white_1;
-      }
+     
 
-      .green_white_2 {
-        grid-area: green_white_2;
-      }
-
-      @media all and (-ms-high-contrast: none) {
-        .container {
-          display: -ms-grid;
-          -ms-grid-columns: 750px;
-          -ms-grid-rows: 350px;
-        }
-
-        .signature_sub {
-          display: -ms-grid;
-          -ms-grid-columns: 750px;
-          -ms-grid-rows: 290px 20px 40px;
-          -ms-grid-row: 1;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .signature_main {
-          display: -ms-grid;
-          -ms-grid-columns: 66.6% 33.3%;
-          -ms-grid-rows: 100%;
-          -ms-grid-row: 1;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .signature_main_sub_A {
-          display: -ms-grid;
-          -ms-grid-columns: 100%;
-          -ms-grid-rows: 14% 7% 79%;
-          -ms-grid-row: 1;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .title {
-          -ms-grid-row: 2;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .name {
-          -ms-grid-row: 1;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .details {
-          display: -ms-grid;
-          -ms-grid-columns: 15% 85%;
-          -ms-grid-rows: 10px 40px 10px 40px 10px 40px 10px 30px 39px;
-          -ms-grid-row: 3;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .contact_logo {
-          -ms-grid-row: 2;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .contact_details {
-          -ms-grid-row: 2;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 2;
-          -ms-grid-column-span: 1;
-        }
-
-        .email_logo {
-          -ms-grid-row: 4;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .email_details {
-          -ms-grid-row: 4;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 2;
-          -ms-grid-column-span: 1;
-        }
-
-        .location_logo {
-          -ms-grid-row: 6;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .location_details {
-          -ms-grid-row: 6;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 2;
-          -ms-grid-column-span: 1;
-        }
-
-        .website_logo {
-          -ms-grid-row: 8;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .website_details {
-          -ms-grid-row: 8;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 2;
-          -ms-grid-column-span: 1;
-        }
-
-        .details_logo_white_1 {
-          -ms-grid-row: 1;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .details_white_1 {
-          -ms-grid-row: 1;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 2;
-          -ms-grid-column-span: 1;
-        }
-
-        .details_white_2 {
-          -ms-grid-row: 3;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 2;
-          -ms-grid-column-span: 1;
-        }
-
-        .details_white_3 {
-          -ms-grid-row: 5;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 2;
-          -ms-grid-column-span: 1;
-        }
-
-        .details_white_4 {
-          -ms-grid-row: 7;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 2;
-          -ms-grid-column-span: 1;
-        }
-
-        .details_white_5 {
-          -ms-grid-row: 9;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 2;
-          -ms-grid-column-span: 1;
-        }
-
-        .details_logo_white_2 {
-          -ms-grid-row: 3;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .details_logo_white_3 {
-          -ms-grid-row: 5;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .details_logo_white_4 {
-          -ms-grid-row: 7;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .details_logo_white_5 {
-          -ms-grid-row: 9;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .signature_main_sub_B {
-          display: -ms-grid;
-          -ms-grid-columns: 100%;
-          -ms-grid-rows: 65% 22% 13%;
-          -ms-grid-row: 1;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 2;
-          -ms-grid-column-span: 1;
-        }
-
-        .logo_B {
-          display: -ms-grid;
-          -ms-grid-columns: 0.7fr 1.3fr;
-          -ms-grid-rows: 1fr;
-          -ms-grid-row: 2;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .logo_B_text {
-          -ms-grid-row: 1;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .logo_B_logo {
-          -ms-grid-row: 1;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 2;
-          -ms-grid-column-span: 1;
-        }
-
-        .logo_whitespace_B {
-          -ms-grid-row: 3;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .logo_sub {
-          display: -ms-grid;
-          -ms-grid-columns: 1fr;
-          -ms-grid-rows: 30% 70%;
-          -ms-grid-row: 1;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .logo_A {
-          -ms-grid-row: 2;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .logo_whitespace_A {
-          -ms-grid-row: 1;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .signature_footer {
-          -ms-grid-row: 3;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .signature_bottom {
-          display: -ms-grid;
-          -ms-grid-columns: 30% 40% 30%;
-          -ms-grid-rows: 100%;
-          -ms-grid-row: 2;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .green_details {
-          -ms-grid-row: 1;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 2;
-          -ms-grid-column-span: 1;
-        }
-
-        .green_white_1 {
-          -ms-grid-row: 1;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 1;
-          -ms-grid-column-span: 1;
-        }
-
-        .green_white_2 {
-          -ms-grid-row: 1;
-          -ms-grid-row-span: 1;
-          -ms-grid-column: 3;
-          -ms-grid-column-span: 1;
-        }
-      }
+     
     </style>
   </head>
   <body>
@@ -591,7 +416,7 @@
         <div class="signature_main">
           <div class="signature_main_sub_A">
             <div class="title">Tour Consultant</div>
-            <div class="name">MONICA <span>REGERU</span></div>
+            <div class="name">MONICA <span class="spanText">REGERU</span></div>
             <div class="details">
               <div class="contact_logo">
                 <img class="image" src="img/Contacticon-01.png" />
@@ -616,10 +441,10 @@
                 <img class="image" src="img/Websiteicon-01.png" />
               </div>
               <div class="website_details">
-                www.sensegetaways.com | Follow us:<span>
-                  <img class="image" src="img/facebookicon-01.png" />
-                  <img class="image" src="img/Instagramicon-01.png"
-                /></span>
+                <div class="website_details_text">www.sensegetaways.com | Follow us:</div>
+                <div class="website_details_logo_A"><img class="image" src="img/facebookicon-01.png" /></div>
+                <div class="website_details_logo_B"><img class="image" src="img/Instagramicon-01.png"/></div>
+                <div class="website_details_whitespace"></div>                
               </div>
               <div class="details_logo_white_1"></div>
               <div class="details_white_1"></div>
@@ -650,12 +475,10 @@
           </div>
         </div>
         <div class="signature_footer"></div>
-        <div class="signature_bottom">
-          <div class="green_details">
-            <img class="image" src="img/Savetheenvironment-01.png" />Rethink.
-            Reduce. Re-use. Recycle
-          </div>
+        <div class="signature_bottom">                      
+          <div class="green_logo"><img class="image" src="img/Savetheenvironment-01.png" /></div>
           <div class="green_white_1"></div>
+          <div class="green_details">Rethink.Reduce. Re-use. Recycle</div>
           <div class="green_white_2"></div>
         </div>
       </div>
