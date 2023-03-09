@@ -21,7 +21,7 @@
       .signature_sub {
         display: grid;
         grid-template-columns: 750px;
-        grid-template-rows: 290px 20px 40px;
+        grid-template-rows: 290px 30px 30px;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
@@ -44,7 +44,7 @@
       .signature_main_sub_A {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 14% 7% 79%;
+        grid-template-rows: 14% 10% 76%;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
@@ -55,21 +55,51 @@
       }
 
       .title {
+        display: grid;
+        grid-template-columns: 15% 85%;
+        grid-template-areas: "title_white title_details";
+        grid-template-rows: 100%;
+        gap: 0px 0px;
+        grid-auto-flow: row;
         grid-area: title;
         font-family:'Sawarabi Gothic',sans-serif;
-        font-size:12px;
+        font-size:15px;
         color:rgb(18,18,18);
         font-weight:bold;
         line-height:24px;
+        vertical-align: baseline;
+      }
+
+      .title_white{
+        grid-area: title_white;
+      }
+
+      .title_details{
+        grid-area: title_details;
       }
 
       .name {
+        display: grid;
+        grid-template-columns: 15% 85%;
+        grid-template-areas: "name_white name_details";
+        grid-template-rows: 100%;
+        gap: 0px 0px;
+        grid-auto-flow: row;
         grid-area: name;
         font-family:'Source Sans 3',sans-serif;
 font-size:30px;
 color:rgb(0,115,208);
 font-weight:bolder;
 line-height:24px;
+vertical-align: baseline;
+      }
+
+      .name_white{
+        grid-area: name_white;
+      }
+
+      .name_details{
+        grid-area:name_details;
       }
       .name .spanText{
         font-family:'Alegreya Sans',sans-serif;
@@ -187,49 +217,66 @@ line-height:24px;
       }
 
       .website_details {
-        display: grid; 
-  grid-template-columns: 60% 8% 8% 24%; 
+        display: flex;
+  align-items: center;
+  justify-content:left;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+       
+  /*display: grid; 
+  grid-template-columns: 59% 18% 18% 5%; 
   grid-template-rows: 100%; 
   gap: 0px 0px; 
   grid-template-areas: 
-    "website_details_text website_details_logo_A website_details_logo_B website_details_whitespace"; 
-  grid-area: website_details; 
+    "website_details_text website_details_logos website_details_logos website_details_whitespace"; 
+  grid-area: website_details; */
       }
 
       .website_details_text {
-         grid-area: website_details_text; 
+        /* grid-area: website_details_text; */
+        flex-basis: 59%;
+         text-align:left;
          font-family:'Sawarabi Gothic',sans-serif;
         font-size:14px;
         color:rgb(18,18,18);
         font-weight:bold;
         line-height:24px;
+        padding-left: 0%;
         }
       .website_details_logo_A { 
-        grid-area: website_details_logo_A;
+        /*grid-area: website_details_logos;*/
+        flex-basis: 18%;       
+             
        }
-      .website_details_logo_B {
-         grid-area: website_details_logo_B; 
-         
-        }
+       .website_details_logo_B { 
+        /*grid-area: website_details_logos;*/
+        flex-basis: 18%;       
+              
+       }
       .website_details_whitespace { 
-        grid-area: website_details_whitespace; 
+        /*grid-area: website_details_whitespace; */
+        flex-basis: 5%;
       }
 
-      .website_details_logo_A .image {
-        width: 100%;
+      .website_details_logo_A .image_web {
+        width:100%;
   height: 100%;
-  object-fit: cover;
-        
+  object-fit:cover;   
+  margin: 0;   
+  padding-left: 0%;
         min-width: 0; /* ensure the image can shrink if needed */
         min-height: 0; /* ensure the image can shrink if needed */
         max-width: 100%; /* prevent the image from growing larger than its container */
         max-height: 100%; /* prevent the image from growing larger than its container */
       }
 
-      .website_details_logo_B .image {
-        width: 100%;
-        height: 100%;
-        object-fit:cover;        
+      .website_details_logo_B .image_web {
+        width:100%;
+  height: 100%;
+  object-fit:cover; 
+  margin: 0;   
+  padding-left: 0%;    
         min-width: 0; /* ensure the image can shrink if needed */
         min-height: 0; /* ensure the image can shrink if needed */
         max-width: 100%; /* prevent the image from growing larger than its container */
@@ -301,7 +348,7 @@ line-height:24px;
 
       .logo_B_text {
         grid-area: logo_B_text;
-        text-align:left; 
+        text-align:right; 
         max-width: 191px; 
         text-decoration:none; 
         color:#333231; 
@@ -310,6 +357,7 @@ line-height:24px;
         font-size:smaller; 
         font-weight: lighter;
         font-style: italic;  
+        padding-top: 10px;
       }
 
       .logo_B_logo {
@@ -326,7 +374,8 @@ line-height:24px;
         min-width: 0; /* ensure the image can shrink if needed */
         min-height: 0; /* ensure the image can shrink if needed */
         max-width: 100%; /* prevent the image from growing larger than its container */
-        max-height: 100%; /* prevent the image from growing larger than its container */       
+        max-height: 100%; /* prevent the image from growing larger than its container */  
+             
       }
 
       .logo_whitespace_B {
@@ -336,7 +385,7 @@ line-height:24px;
       .logo_sub {
         display: grid;
         grid-template-columns:100%;
-        grid-template-rows: 30% 70%;
+        grid-template-rows: 15% 85%;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
@@ -371,7 +420,7 @@ line-height:24px;
       .signature_bottom {
         display: grid; 
   grid-auto-columns: 1fr; 
-  grid-template-columns: 25% 5% 40% 30%; 
+  grid-template-columns: 40% 10% 40% 10%; 
   grid-template-rows: 100%; 
   gap: 0px 0px; 
   grid-template-areas: 
@@ -415,35 +464,35 @@ line-height:24px;
       <div class="signature_sub">
         <div class="signature_main">
           <div class="signature_main_sub_A">
-            <div class="title">Tour Consultant</div>
-            <div class="name">MONICA <span class="spanText">REGERU</span></div>
+            <div class="title"><div class="title_white"></div> <div class="title_details">Tours&nbsp;Consultant</div></div>
+            <div class="name"><div class="name_white"></div><div class="name_details">MONICA&nbsp;<span class="spanText">REGERU</span></div></div>
             <div class="details">
               <div class="contact_logo">
                 <img class="image" src="img/Contacticon-01.png" />
               </div>
               <div class="contact_details">
-                (+254) 20 7606 000-8 | (+254) 758 023 508
+                (+254)&nbsp;20&nbsp;7606&nbsp;000-8&nbsp;|&nbsp;(+254)&nbsp;758&nbsp;023&nbsp;508
               </div>
               <div class="email_logo">
                 <img class="image" src="img/Emailicon-01.png" />
               </div>
               <div class="email_details">
-                monica@sensegetaways.com | hello@sensegetaways.com
+               <a href="mailto:monica@sensegetaways.com"  >monica@sensegetaways.com&nbsp;</a>|<a href="mailto:hello@sensegetaways.com"    >&nbsp;hello@sensegetaways.com</a> 
               </div>
               <div class="location_logo">
                 <img class="image" src="img/Locatioicon-01.png" />
               </div>
               <div class="location_details">
-                Mombasa Road, Next to Plaza 2000.<br />P.O Box 59470 00200
-                Nairobi, Kenya
+                Mombasa&nbsp;Road,&nbsp;Next&nbsp;to&nbsp;Plaza&nbsp;2000.<br />P.O Box 59470 00200
+                Nairobi,&nbsp;Kenya
               </div>
               <div class="website_logo">
                 <img class="image" src="img/Websiteicon-01.png" />
               </div>
               <div class="website_details">
-                <div class="website_details_text">www.sensegetaways.com | Follow us:</div>
-                <div class="website_details_logo_A"><img class="image" src="img/facebookicon-01.png" /></div>
-                <div class="website_details_logo_B"><img class="image" src="img/Instagramicon-01.png"/></div>
+                <div class="website_details_text"><a href="https://sensegetaways.com/"    >www.sensegetaways.com&nbsp;</a>|&nbsp;Follow&nbsp;us:</div>
+                <div class="website_details_logo_A"> <a href="https://www.facebook.com/SenseGetawaysAndEvents"    ><img class="image_web" src="img/facebookicon-01.png" /></a></div>
+                <div class="website_details_logo_B"><a href="https://www.instagram.com/sensegetawaysandevents/" ><img class="image_web" src="img/Instagramicon-01.png"/></a></div>
                 <div class="website_details_whitespace"></div>                
               </div>
               <div class="details_logo_white_1"></div>
@@ -460,16 +509,16 @@ line-height:24px;
           </div>
           <div class="signature_main_sub_B">
             <div class="logo_B">
-              <div class="logo_B_text">Powered by</div>
+              <div class="logo_B_text">Powered&nbsp;by</div>
               <div class="logo_B_logo">
-                <img class="image" src="img/SOA_Logo-01.png" />
+                <a href="http://www.senseofafrica.com" ><img class="image" src="img/SOA_Logo-01.png" /></a>
               </div>
             </div>
             <div class="logo_whitespace_B"></div>
             <div class="logo_sub">
               <div class="logo_whitespace_A"></div>
               <div class="logo_A">
-                <img class="image" src="img/SGE_Logo-02.png" />
+                 <a href="https://sensegetaways.com/"><img class="image" src="img/SGE_Logo-02.png" /></a>
               </div>
             </div>
           </div>
